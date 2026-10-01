@@ -1,36 +1,93 @@
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Byte-compiled / optimized / DLL files
+# =============================================================================
+# Python
+# =============================================================================
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
 
-# IDEs and Editors
+# =============================================================================
+# Entornos virtuales
+# =============================================================================
+.env
+.venv
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+source/
+
+# =============================================================================
+# Variables de entorno (secretos)
+# =============================================================================
+.env.local
+.env.*.local
+*.secret
+
+# =============================================================================
+# IDEs y Editores
+# =============================================================================
 .vscode/
 .idea/
 *.swp
 *.swo
+*.sublime-project
+*.sublime-workspace
 
-# Docker
-.dockerignore
-
-# Misc
-.DS_Store
-
-# Pytest & Ruff cache
+# =============================================================================
+# Herramientas de calidad de código
+# =============================================================================
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
 
-# MAVProxy & SITL Logs/Cache
-mav.parm
-mav.tlog
-mav.tlog.raw
-eeprom.bin
-*.rbin
+# =============================================================================
+# Docker
+# =============================================================================
+.dockerignore
+
+# =============================================================================
+# Sistema operativo
+# =============================================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =============================================================================
+# MAVProxy, SITL y ArduPilot — archivos generados en simulación
+# =============================================================================
+simulator/mav.parm
+simulator/mav.tlog
+simulator/mav.tlog.raw
+simulator/eeprom.bin
+simulator/*.rbin
+simulator/*.log
+
+# Archivos de marcadores temporales de MAVProxy
+marker_*.json
+
+# Logs binarios de ArduPilot (muy pesados)
+logs/
+terrain/
+
+# =============================================================================
+# Logs del backend
+# =============================================================================
+*.log
+logs/*.log
+
+# =============================================================================
+# Bases de datos locales
+# =============================================================================
+*.db
+*.sqlite
+*.sqlite3
